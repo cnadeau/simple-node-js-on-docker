@@ -5,9 +5,12 @@
   "author": "m21lab@macadamian.com",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "npm install && concurrently \"node-inspector --web-port 9090\" \"nodemon --debug server.js\""
   },
   "dependencies": {
-    "express": "4.14.0"
+    "concurrently": "2.2.0",
+    "express": "4.14.0",
+    "node-inspector": "0.12.8",
+    "nodemon": "1.10.2"
   }
 }
