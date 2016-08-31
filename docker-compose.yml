@@ -1,0 +1,9 @@
+version: '2'
+services:
+
+  simple-node:
+    build:
+      context: .
+    # expose local port 7777 and redirect it to the container's inner port 8080 (the one the server listens to)
+    ports:
+      - 7777:8080
